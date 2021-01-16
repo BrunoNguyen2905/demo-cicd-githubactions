@@ -19,7 +19,8 @@
     "build": "react-scripts build  && yarn lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "prettier-eslint '**/*.js' --write"
   },
   "eslintConfig": {
     "extends": [
