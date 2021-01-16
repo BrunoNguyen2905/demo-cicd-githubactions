@@ -25,7 +25,7 @@ jobs:
       - name: install node modules
         run: |
           yarn install --frozen-lockfile
-      - name: Lint
-        run: yarn lint
+      # - name: Lint
+      #   run: yarn lint
         env:
           CI: true
