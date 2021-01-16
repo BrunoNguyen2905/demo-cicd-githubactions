@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> tada, App.js has been changed(merged from dev).
+          Edit <code>src/App.js</code> tada, App.js has been changed(merged from dev again taaaaaaaa).
         </p>
         <a
           className="App-link"
