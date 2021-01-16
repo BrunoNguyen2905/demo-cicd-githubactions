@@ -39,7 +39,7 @@ jobs:
 
        - name: install node modules
         run: |
-          yarn install --frozen-lockfile
+          rm -rf node_modules && yarn install --frozen-lockfile
       - run: yarn build --if-present # build the project
       - run: yarn test # run the tests
       # deploy site to netlify using secrets created on repository
