@@ -17,17 +17,24 @@ jobs:
       #     path: ~/.npm
       #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       #     restore-keys: ${{ runner.os }}-node-
-      - name: Get yarn cache directory
-      id: yarn-cache-dir
-      run: |
-        echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-node-
+      
+      # - name: Get yarn cache directory
+      # id: yarn-cache-dir
+      # run: |
+      #   echo "::set-output name=dir::$(yarn cache dir)"
         
-      - uses: actions/cache@v1
-      with:
-        path: ${{ steps.yarn-cache-dir.outputs.dir }}
-        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      # - uses: actions/cache@v1
+      # with:
+      #   path: ${{ steps.yarn-cache-dir.outputs.dir }}
+      #   key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+      #   restore-keys: |
+      #     ${{ runner.os }}-node-
   
 
        - name: install node modules
