@@ -1,7 +1,5 @@
 name: Auto Deploy
-on:
-  push:
-    branches: [main] # run on pushes to master
+on: [push, pull_request]
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
