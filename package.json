@@ -22,11 +22,7 @@
     "lint": "eslint --fix '**/*.{js,jsx}'",
     "lint:fix": "prettier-eslint '**/*.js' --write"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
